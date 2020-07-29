@@ -1,0 +1,639 @@
+@charset 'UTF-8';
+
+:root {
+  --font-size-small: 13px;
+  --font-size-middle: 17px;
+  --white-color: white;
+  --black-color: #2C2A29;
+  --basic-color: #f6f5ef;
+  --blue-grey-color: #c3d2d9;
+  --grey-color: #cccccb;
+}
+
+/* 공통 부분 속성 */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Nanum Gothic', sans-serif;
+  word-break: keep-all;
+  color: var(--black-color);
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.orange {
+  color: orange;
+}
+
+.green {
+  color: green;
+}
+
+.hideme {
+  opacity: 0;
+}
+/* 공통 부분 속성 끝 */
+/* Header 영역 */
+header {
+  width: 100%;
+  background-color: #f6f5ef;
+}
+
+header .navbarOne {
+  display: flex;
+  height: 35px;
+}
+
+header .navbar_logo {
+  width: 120px;
+}
+
+header .navbar_logo img {
+  width: 100%;
+}
+
+header .navbarOne .navbarOne_menu {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--font-size-small);
+}
+
+header .navbarOne .navbarOne_menu li {
+  padding: 0 20px;
+  margin: 10px 0;
+  border-right: 1px solid #ccc;
+}
+
+header .navbarOne .navbarOne_menu li:last-child {
+  font-size: var(--font-size-middle);
+  border: 0;
+  margin-right: 5%;
+}
+
+header .navbarTwo_menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--font-size-middle);
+}
+
+header .navbarTwo_menu li {
+  padding: 20px;
+}
+
+header .navbarTwo_menu li:last-child {
+  margin-right: 1%;
+}
+/* Header 영역 끝 */
+/* promotion 영역 */
+.promotion {
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.promotion .text {
+  padding: 2%;
+}
+
+.promotion .moreBtn {
+  padding: 1% 2%;
+  margin: 2%;
+  border: 3px solid var(--basic-color);
+  border-radius: 3px;
+  width: 10%;
+  text-align: center;
+}
+
+.promotion .moreBtn a {
+  color: var(--basic-color);
+}
+
+/* item img 사진 */
+/* item1 */
+.promotion .item1 {
+  width: 40%;
+  max-width: 500px;
+  min-width: 80px;
+  position: absolute;
+  top: 10%;
+  left: 32%;
+  display: flex;
+}
+
+.promotion .item1 span {
+  width: 65%;
+  position: relative;
+  left: 20%;
+}
+
+.promotion .item1 img {
+  width: 35%;
+}
+/* item1 End */
+/* item2 */
+.promotion .item2 {
+  width: 70%;
+  max-width: 700px;
+  min-width: 80px;
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+  display: flex;
+}
+
+.promotion .item2 span {
+  width: 70%;
+  position: relative;
+  left: 20%;
+  top: 40%;
+}
+
+.promotion .item2 img {
+  width: 30%;
+}
+/* item2 End */
+/* item3 */
+.promotion .item3 {
+  width: 50%;
+  max-width: 600px;
+  min-width: 100px;
+  position: absolute;
+  bottom: 5%;
+  right: -200px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.promotion .item3 span {
+  width: 40%;
+}
+
+.promotion .item3 img {
+  width: 50%;
+}
+/* item img 끝 */
+/* item 옆에 text */
+.promotion .items_name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.promotion .items_name span:first-child {
+  border-bottom: 1px solid var(--basic-color);
+  padding-bottom: 3%;
+}
+
+.promotion .items span {
+  color: var(--basic-color);
+  padding-top: 3%;
+  line-height: 25px;
+}
+/* Promotion 영역 끝 */
+/* Notice 영역 */
+.notice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notice .noticeOne {
+  width: 50%;
+  background-color: var(--black-color);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.notice .noticeOne span {
+  color: var(--basic-color);
+  margin-right: 30px;
+}
+
+.notice .noticeTwo {
+  background-color: var(--basic-color);
+  width: 50%;
+  padding: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.notice .noticeTwo i {
+  font-size: 30px;
+  margin-left: 50%;
+}
+/* Notice 영역 끝 */
+/* MY STARBUCKS REWARDS */
+.rewards {
+  width: 100%;
+  height: 395px;
+  position: relative;
+  background-color: #d6c798;
+  display: flex;
+}
+
+.rewards .rewards_left {
+  background: url('/assets/images/backImage_star.png') center no-repeat;
+  background-size: 100% 100%;
+  width: 40%;
+  height: 395px;
+}
+
+.rewards .rewards_left img {
+  position: absolute;
+  top: 40%;
+  left: 3%;
+}
+
+.rewards .rewards_right {
+  height: 395px;
+  position: absolute;
+  top: 0;
+  right: 15%;
+}
+
+.rewards .rewards_right .textOne {
+  padding: 5% 0;
+}
+
+.rewards .rewards_right .textOne ul {
+  padding: 5% 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+}
+
+.rewards ul li {
+  border: 3px solid var(--black-color);
+  padding: 3% 18%;
+}
+
+.rewards ul .joinBtn {
+  background-color: var(--black-color);
+  color: var(--basic-color);
+}
+
+.rewards .rewards_right .textTwo {
+  display: flex;
+  flex-direction: column;
+}
+
+.rewards .rewards_right .textTwo img {
+  margin: auto;
+  width: 60%;
+  padding-bottom: 3%;
+}
+
+.rewards .rewards_right .textTwo span {
+  border: 3px solid var(--black-color);
+  padding: 3% 18%;
+  text-align: center;
+  font-size: 18px;
+}
+/* MY STARBUCKS REWARDS End */
+/* SUMMER20_Bean */
+.summer20_bean {
+  width: 100%;
+  height: 70vh;
+  background: url('/assets/images/20_summer_rwanda_bg.jpg') center no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summer20_bean .summer20_bean_text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 10%;
+}
+
+.summer20_bean .summer20_bean_text span {
+  border: 3px solid var(--basic-color);
+  border-radius: 3px;
+  color: var(--basic-color);
+  text-align: center;
+  width: 30%;
+  padding: 2% 0;
+  margin: 10% 0;
+}
+/* SUMMER20_Bean End */
+/* NEW ARRIVAL */
+.new_arrival {
+  background-color: var(--blue-grey-color);
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+
+.new_arrival .box {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  font-size: 13px;
+}
+
+.new_arrival .box span {
+  display: block;
+  border: 3px solid var(--black-color);
+  border-radius: 5px;
+  width: 25%;
+  padding: 2% 0;
+  margin: 4% 0;
+  text-align: center;
+  position: relative;
+  left: 31%;
+}
+
+.new_arrival .box ul {
+  padding: 1% 0;
+  line-height: 25px;
+}
+
+.new_arrival .box ul li {
+  list-style: square;
+  position: relative;
+  left: 34%;
+}
+
+.new_arrival > img {
+  width: 70%;
+  position: relative;
+  left: 10%;
+}
+/* NEW ARRIVAL End */
+/* PICK YOUR FAVORITE */
+.favorite {
+  width: 100%;
+  height: 100vh;
+  background: url('/assets/images/fav_prod_bg_new.jpg');
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.favorite .box {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.favorite .box img:first-child {
+  width: 80%;
+  position: relative;
+  left: 22%;
+}
+
+.favorite .box span {
+  width: 35%;
+  padding: 3% 0;
+  text-align: center;
+  color: var(--basic-color);
+  border: 3px solid var(--basic-color);
+  border-radius: 3px;
+  position: relative;
+  left: 63%;
+}
+/* PICK YOUR FAVORITE End */
+/* RESERVE MAGAZINE */
+.magazine::before {
+  content: '';
+  background-color: var(--grey-color);
+  margin: 0 auto;
+  width: 75%;
+  height: 1px;
+  position: absolute;
+  top: 64.8%;
+  left: 16.5%;
+  z-index: -1;
+}
+
+.magazine {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.magazine::after {
+  content: '';
+  background-color: var(--grey-color);
+  width: 1px;
+  height: 95%;
+  position: absolute;
+  left: 43%;
+  z-index: -1;
+}
+
+.magazine .box {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  right: 7%;
+}
+
+.magazine .box img:last-child {
+  position: relative;
+  top: 10%;
+  width: 50%;
+}
+/* RESERVE MAGAZINE End */
+/* STORE */
+.store {
+  width: 100%;
+  height: 50vh;
+  background: url('/assets/images/store_bg.jpg');
+  display: flex;
+  position: relative;
+}
+
+.store .imgBox img:first-child {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  z-index: 1;
+}
+
+.store .imgBox img:nth-child(2) {
+  position: absolute;
+  left: 10%;
+}
+
+.store .imgBox .img3 {
+  background: url('/assets/images/store_exp_img03.png') bottom no-repeat;
+  width: 20%;
+  height: 22%;
+  position: absolute;
+  top: 0;
+  left: 33%;
+}
+
+.store .imgBox img:last-child {
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+}
+
+.store .textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 25%;
+  height: 60%;
+  position: absolute;
+  top: 25%;
+  right: 20%;
+}
+
+.store .textBox span {
+  width: 25%;
+  padding: 2% 0;
+  text-align: center;
+  color: var(--black-color);
+  border: 3px solid var(--black-color);
+  border-radius: 3px;
+}
+/* STORE End */
+/* 우측 Banner */
+aside {
+  /* display: none; */
+  position: fixed;
+  top: 15%;
+  right: 0;
+}
+
+aside img {
+  width: 90%;
+}
+/* 우측 Banner 끝 */
+/* Footer */
+footer {
+  background-color: var(--black-color);
+  width: 100%;
+  height: 75vh;
+}
+
+footer .footer_nav {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  padding-top: 30px;
+}
+
+footer .footer_nav ul {
+  width: 220px;
+}
+
+footer .footer_nav ul li {
+  color: var(--basic-color);
+  padding: 7px 0;
+  font-size: 12px;
+}
+
+footer .footer_nav ul li.first {
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+footer .awards {
+  width: 100%;
+  background-color: #282828;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer .awards ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer .copyright {
+  padding-top: 30px;
+  width: 100%;
+}
+
+footer .copyright ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer .copyright ul li {
+  padding: 0 10px;
+  font-size: 12px;
+  color: #ccc;
+  border-left: 1px solid #393939;
+}
+
+footer .copyright ul li:first-child {
+  color: #00b050;
+  font-weight: bold;
+  border: 0;
+}
+
+footer .link ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer .link ul li {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  font-size: 12px;
+  width: 100px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 15px 5px;
+}
+
+footer .copy_info ul {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+footer .copy_info li {
+  color: #999;
+  margin: 0 7px;
+  font-size: 12px;
+}
+
+footer .copy{
+  display: block;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin: 20px 0;
+}
+/* Footer End */

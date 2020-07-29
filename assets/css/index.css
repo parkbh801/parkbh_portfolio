@@ -1,0 +1,315 @@
+@charset 'UTF-8';
+
+/* 공통적으로 적용될 CSS */
+:root {
+  --white-color: white;
+  --blue-color: rgb(169, 174, 241); 
+  --font-size-small: 20px;
+  --font-size-medium: 30px;
+  --font-size-large: 50px;
+  --padding: 10px;
+  --button-color: white;
+  --background-color: blue;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Jua', sans-serif;
+  font-size: var(--font-size-medium);
+}
+
+html, body {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  outline: 0;
+  cursor: pointer;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* 공통적으로 적용될 CSS 끝 */
+/* 네비게이션 */
+.navbar {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.navbar > .nav_logo {
+  font-size: var(--font-size-medium);
+}
+
+.navbar ul > li:hover {
+  background-color: white;
+  border-radius: 10px;
+  color: var(--blue-color);
+}
+
+.navbar ul > li:hover > a {
+  color: var(--blue-color);
+}
+
+.navbar > .nav_menu {
+  display: flex;
+}
+
+.navbar > .nav_menu > li {
+  padding: 10px 50px;
+}
+
+.navbar > .nav_menu > li > a {
+  font-size: var(--font-size-small);
+}
+
+.navbar > .nav_more {
+  display: none;
+}
+
+/* 첫번째 스크롤 */
+.scrollOne > .box {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  background: url('/assets/images/1.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.scrollOne > .box > h1 {
+  font-size: var(--font-size-large);
+}
+
+.scrollOne > .box > p {
+  font-size: var(--font-size-medium);
+  padding: var(--padding);
+}
+
+.scrollOne > .box > button {
+  font-size: var(--font-size-small);
+  padding: 15px 60px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: var(--button-color);
+}
+
+/* 두 번째 스크롤 */
+/* 케러셀 슬라이드 만들기 */
+.scrollTwo > .slider {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+.scrollTwo > .slider > .slide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.scrollTwo > .slider > .slide1 {
+  background: url('/assets/images/1.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.scrollTwo > .slider > .slide2 {
+  background: url('/assets/images/2.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.scrollTwo > .slider > .slide3 {
+  background: url('/assets/images/3.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.scrollTwo > .slider > .showing {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 세 번째 스크롤 */
+.scrollThree {
+  margin: 10% 0;
+}
+
+.scrollThree > h1 {
+  text-align: center;
+  padding-bottom: 5%;
+  font-size: var(--font-size-large);
+}
+
+.scrollThree .boxes {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  border: 2px solid var(--blue-color);
+}
+
+.scrollThree .boxes .box {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 25%;
+  text-align: center;
+  align-items: center;
+  word-break: keep-all;
+}
+
+.scrollThree .boxes .box span {
+  font-size: var(--font-size-small);
+}
+
+.scrollThree .boxes .box:hover {
+  opacity: 0.4;
+  transition: 0.3s ease-in-out;
+}
+
+.scrollThree .boxes .box:hover span {
+  color: blue;
+}
+
+.scrollThree .boxes .box1 {
+  background: url('/assets/images/watergun.jpg') center no-repeat;
+  background-size: color;
+  color: white;
+}
+
+.scrollThree .boxes .box2 {
+  background: url('/assets/images/food.jpg') center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.scrollThree .boxes .box3 {
+  background: url('/assets/images/scare.jpg') center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.scrollThree .boxes .box4 {
+  background: url('/assets/images/friend.jpg') center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.scrollThree .boxes span {
+  display: block;
+  width: 100%;
+  margin-top: 50%;
+}
+
+footer {
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  background-color: var(--blue-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  word-break: keep-all;
+}
+
+footer address {
+  margin: 3%;
+  font-size: var(--font-size-small);
+}
+
+footer.copyright, footer span {
+  font-size: var(--font-size-small);
+}
+
+/* 화면의 가장 위로 올라가게 하는 버튼 */
+aside a i {
+  color: var(--blue-color);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  border: 1px solid var(--blue-color);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 2;
+  transition: 0.6s ease-in-out;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .navbar > .nav_logo {
+    font-size: var(--font-size-medium);
+    width: 100%;
+  }
+
+  .navbar > .nav_menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar > .show {
+    display: flex;
+  }
+
+  .navbar .nav_menu li:first-child {
+    margin-top: 20px;
+  }
+  
+  .navbar > .nav_more {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .scrollOne h1 {
+    text-align: center;
+  }
+
+  aside a i {
+    padding: 15px;
+  }
+}
